@@ -11,7 +11,9 @@ There are three environment variables that required in your Lambda configuration
 
 #### Recommend memory and runtime settings
 Handler: `com.porg.Main::makeThumbnailFromEvent`
+
 Memory: 512mb
+
 Timeout: 30s
 
 #### Generating fat .jar

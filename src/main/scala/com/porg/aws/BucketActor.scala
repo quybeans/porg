@@ -16,7 +16,7 @@ import com.amazonaws.services.s3.model.S3ObjectInputStream
 import com.sksamuel.scrimage.Image
 import com.sksamuel.scrimage.nio.JpegWriter
 
-final class BucketAction(
+final class BucketActor(
   bucketName: String
 )(implicit
   val client: AmazonS3

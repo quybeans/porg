@@ -14,7 +14,7 @@ import scala.util.Properties.envOrNone
 import com.amazonaws.services.lambda.runtime.events.S3Event
 import com.amazonaws.services.s3.AmazonS3
 import com.amazonaws.services.s3.AmazonS3ClientBuilder
-import com.porg.aws.BucketAction
+import com.porg.aws.BucketActor
 import com.porg.aws.PorgException
 
 object Main extends App {
@@ -39,7 +39,7 @@ object Main extends App {
         .withRegion(regionString)
         .build()
 
-      val bucketActor = new BucketAction(bucket)
+      val bucketActor = new BucketActor(bucket)
 
       event.getRecords.asScala.toList.foreach { record =>
         val key = decodeS3Key(record.getS3.getObject.getKey)
