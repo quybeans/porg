@@ -20,8 +20,6 @@ final class SlackMessenger(
   val system: ActorSystem
 ) {
 
-  val BASE_URL = "https://hooks.slack.com/services/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"
-
   private[this] def encodeMessage(message: String): String = {
       s"""
       {"text": "$message"}
